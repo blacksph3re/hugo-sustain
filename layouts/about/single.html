@@ -1,0 +1,27 @@
+{{ partial "head" . }}
+  <body>
+    <div id="wrap">
+
+      <!-- Header -->
+      {{ partial "header" . }}
+      {{ if isset .Params "showpagemeta" }}
+        {{ .Content }}
+      {{ else }}
+      <div class="container">
+            <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              {{ .Content }}
+            </div>
+          </div>
+          <hr>
+        </div>
+      {{ end }}
+      </div>
+    </div>
+
+    <!-- Footer -->
+    {{ partial "footer" . }}
+    
+  </body>
+</html>
